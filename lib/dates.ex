@@ -6,6 +6,7 @@ defmodule Dates do
   @doc """
   All dates between the two (Elixir) Dates
   """
+  @spec days_between(Calendar.date, Calendar.date) :: [Calendar.date]
   def days_between(date1, date2) do
     days_between(date1, date2, fn(_) -> true end)
   end
@@ -13,6 +14,7 @@ defmodule Dates do
   @doc """
   All dates between the two (Elixir) Dates, ignoring Saturdays and Sundays
   """
+  @spec weekdays_between(Calendar.date, Calendar.date) :: [Calendar.date]
   def weekdays_between(date1, date2) do
     days_between(date1, date2, &gregorian_weekday/1)
   end

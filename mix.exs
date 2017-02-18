@@ -15,6 +15,8 @@ defmodule Dates.Mixfile do
   end
 
   defp deps do
-    []
+    [
+      {:credo, "~> 0.6.1"},
+    ]
   end
 end
